@@ -1,0 +1,12 @@
+<div class="row mb-4">
+    <div class="col-12 col-sm-8 col-md-6 mx-auto">
+        <input type="text" class="search-input" placeholder="Buscar productos..." (keydown.enter)="search(term.value)"
+            #term>
+        <button (click)="search(term.value)" class="search-button">Buscar</button>
+    </div>
+</div>
+
+<div class="row">
+    <app-product class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-4" *ngFor="let product of products"
+        [product]="product"></app-product>
+</div>
