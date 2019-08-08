@@ -23,11 +23,10 @@ export class ProductsService {
       }));
   }
 
-  getProduct(id: string) {
-    return this.http.get(`${this.BASE_URL}/items/${id}`);
-  }
-
   getSeller(sellerID: Number) {
-    return this.http.get(`${this.BASE_URL}/users/${sellerID}`);
+    return this.http.get(`${this.BASE_URL}/users/${sellerID}`)
+      .pipe(map(res => {
+        return res['nickname'];
+      }));
   }
 }

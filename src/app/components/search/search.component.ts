@@ -10,11 +10,10 @@ export class SearchComponent {
   constructor(private productsService: ProductsService) { }
 
   search(query: string) {
+    if (!query) return;
     this.productsService.getProducts(query).subscribe(products => {
       this.products = products;
       console.log(this.products);
-
     });
   }
-
 }
