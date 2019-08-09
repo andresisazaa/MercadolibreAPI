@@ -1,12 +1,12 @@
 <div class="row mb-4">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
+    <div class="col-12 col-sm-10 col-md-6 col-lg-6 col-xl-4 mx-auto">
         <input type="text" class="search-input" placeholder="Buscar productos..." (keydown.enter)="search(term.value)"
             #term>
-        <button (click)="search(term.value)" class="search-button">Buscar</button>
+        <button (click)="search(term.value)" class="search-button"><i class="fas fa-search"></i></button>
     </div>
 </div>
 
-<div class="row">
+<div class="row cards">
     <app-product class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-4" *ngFor="let product of products"
         [product]="product"></app-product>
 </div>
