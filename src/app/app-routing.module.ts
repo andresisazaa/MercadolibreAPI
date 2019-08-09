@@ -5,7 +5,7 @@ import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   { path: 'search', component: SearchComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'search' }
+  { path: '**', pathMatch: 'full', redirectTo: '/search' }
 ];
 
 @NgModule({
