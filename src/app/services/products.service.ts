@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductsService {
-  BASE_URL = 'https:api.mercadolibre.com';
+  BASE_URL = 'https://api.mercadolibre.com';
 
   constructor(private http: HttpClient) { }
 
