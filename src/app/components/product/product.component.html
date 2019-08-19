@@ -1,10 +1,10 @@
 <div class="product-card animated fadeIn">
-    <img [src]="product.thumbnail" class="product-card-img" [alt]="product.title">
+    <img [src]="product.imgUrl" class="product-card-img" [alt]="product.title">
     <div class="product-card-content">
         <h4 class="product-card-title">{{product.title}}</h4>
-        <p class="product-card-price">{{product.price | currency : 'USD' : 'symbol' : '1.0'}}</p>
+        <p class="product-card-price">{{product.price | currency:'COP':'symbol-narrow'}}</p>
         <p class="product-card-seller">Vendedor:
             <br>{{sellerName}}</p>
-        <a class="product-card-link" [href]="product.permalink" target="_blank">Ver en tienda</a>
+        <a class="product-card-link" [href]="product.marketUrl" target="_blank">Ver en tienda</a>
     </div>
 </div>
